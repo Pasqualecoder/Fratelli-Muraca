@@ -43,11 +43,15 @@
             --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
+        html,
         body {
             font-family: var(--font-body);
             background-color: var(--warm-cream);
             color: #2b2b2b;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+            position: relative;
         }
 
         .font-heading {
@@ -149,13 +153,11 @@
         }
 
         .cover-logo-fullscreen {
-            width: 300px;
-            max-width: 92vw;
+            width: 540px;
+            max-width: 85vw;
             height: auto;
             display: block;
             margin: 0 auto;
-            transform: scale(1.8);
-            transform-origin: center center;
         }
 
         .scroll-down-indicator {
@@ -207,9 +209,10 @@
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
             line-height: 1.15;
             font-weight: 700;
+            word-wrap: break-word;
         }
 
         .hero-subtitle {
@@ -606,8 +609,8 @@
 
             <!-- Facebook Social Plugin -->
             <div class="row justify-content-center mt-4">
-                <div class="col-auto">
-                    <div class="bg-white p-2 rounded-4 shadow-sm">
+                <div class="col-12 col-sm-auto text-center">
+                    <div class="bg-white p-2 rounded-4 shadow-sm d-inline-block mw-100 overflow-hidden">
                         <iframe
                             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFratelliMuraca&tabs=timeline&width=500&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
                             width="500" height="200" style="border:none;overflow:hidden;max-width:100%;" scrolling="no"
